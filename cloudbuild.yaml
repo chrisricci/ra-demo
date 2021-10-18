@@ -30,7 +30,7 @@ steps:
   args:
   - '-c'
   - >
-    gcloud container hub memberships get-credentials my-gke-cluster; skaffold run -f=skaffold.yaml --default-repo=gcr.io/$PROJECT_ID;
+    gcloud beta container hub memberships get-credentials my-gke-cluster; skaffold run -f=skaffold.yaml --default-repo=gcr.io/$PROJECT_ID;
 
 # Add more power, and more time, for heavy Skaffold build
 timeout: '3600s'
