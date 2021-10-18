@@ -1,0 +1,7 @@
+apiVersion: networking.gke.io/v1beta2
+kind: ManagedCertificate
+metadata: # kpt-merge: /ob-cert
+  name: ob-cert
+spec:
+  domains:
+    - onlineboutique.dev

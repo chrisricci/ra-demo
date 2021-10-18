@@ -1,0 +1,18 @@
+apiVersion: kpt.dev/v1
+kind: Kptfile
+metadata:
+  name: microservices-demo
+upstream:
+  type: git
+  git:
+    repo: https://github.com/GoogleCloudPlatform/microservices-demo
+    directory: /
+    ref: master
+  updateStrategy: resource-merge
+upstreamLock:
+  type: git
+  git:
+    repo: https://github.com/GoogleCloudPlatform/microservices-demo
+    directory: /
+    ref: master
+    commit: faef8b8800e8e8c9c91fbbbb413a73b2c1042fcf
